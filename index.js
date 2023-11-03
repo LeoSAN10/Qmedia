@@ -14,10 +14,10 @@ function showQuestion(questionNumber) {
   paginationItems.forEach((item, index) => {
     if (index + 1 === questionNumber) {
       item.classList.add("active");
-      item.style.backgroundColor = "#00A5FF"; // Изменение цвета на зеленый
+      item.style.backgroundColor = "#00A5FF";
     } else {
       item.classList.remove("active");
-      item.style.backgroundColor = "#89D1F8"; // Изменение цвета на серый
+      item.style.backgroundColor = "#89D1F8";
     }
   });
 
@@ -26,7 +26,9 @@ function showQuestion(questionNumber) {
 }
 
 function nextQuestion(questionNumber) {
-    const answerOptions = document.querySelectorAll(`input[name="answer${currentQuestion}"]`);
+  const answerOptions = document.querySelectorAll(
+    `input[name="answer${currentQuestion}"]`
+  );
   let isAnswerSelected = false;
 
   for (let i = 0; i < answerOptions.length; i++) {
@@ -37,18 +39,23 @@ function nextQuestion(questionNumber) {
   }
 
   if (!isAnswerSelected && !isWarningDisplayed) {
-    const warningText = document.createElement('p');
-    warningText.textContent = 'Пожалуйста, выберите один из вариантов ответа!';
-    warningText.classList.add('warning');
-    warningText.style.color = 'red';
-    const currentQuestionContainer = document.getElementById(`question${currentQuestion}`);
+    const warningText = document.createElement("p");
+    warningText.textContent = "Пожалуйста, выберите один из вариантов ответа!";
+    warningText.classList.add("warning");
+    warningText.style.color = "red";
+    const currentQuestionContainer = document.getElementById(
+      `question${currentQuestion}`
+    );
     currentQuestionContainer.appendChild(warningText);
     isWarningDisplayed = true;
     return;
   } else if (isAnswerSelected && isWarningDisplayed) {
-    const currentQuestionContainer = document.getElementById(`question${currentQuestion}`);
-    const existingWarning = currentQuestionContainer.querySelector('.warning');
+    const currentQuestionContainer = document.getElementById(
+      `question${currentQuestion}`
+    );
+    const existingWarning = currentQuestionContainer.querySelector(".warning");
     currentQuestionContainer.removeChild(existingWarning);
+    isAnswerSelected = false;
     isWarningDisplayed = false;
   }
   showQuestion(questionNumber);
