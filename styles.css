@@ -218,3 +218,39 @@ button.next{
     background-repeat: no-repeat;
     cursor: pointer;
 }
+
+@media screen and (max-width: 910px) {
+    .quiz{
+        margin-right: 50px;
+    }
+}
+
+@media screen and (max-width: 494px) {
+    .quiz_buttons{
+        bottom: 55px;
+    }
+}
+
+@media screen and (max-width: 522px) {
+    .warning{
+        bottom: 0px;
+    }
+}
+
+@media screen and (max-width: 364px) {
+    .question_title{
+        font-size: 20px;
+    }
+}
+
+@media screen and (max-width: 347px) {
+    .warning{
+        font-size: 11px;
+    }
+    .quiz_buttons{
+        bottom: 45px;
+    }
+    .question{
+        margin: auto;
+    }
+}
