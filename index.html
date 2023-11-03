@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Quiz</title>
+  </head>
+  <body>
+    <div class="main_container">
+      <div class="title_description">
+        <h1 class="title_name">Онлайн-подбор средств для лица</h1>
+        <p class="title_text">
+          Пройдите короткий тест и получите список наиболее подходящих для вас
+          косметических продуктов
+        </p>
+      </div>
+      <div class="quiz" id="quiz">
+        <ul class="pagination">
+          <li class="active" onclick="showQuestion(1)"></li>
+          <li onclick="showQuestion(2)"></li>
+          <li onclick="showQuestion(3)"></li>
+        </ul>
+        <div class="progress" id="progress"></div>
+        <div class="question" id="question1">
+          <h2>Сколько вам лет?</h2>
+          <div class="options">
+            <div class="option">
+              <input type="radio" name="answer1" />
+              <label for="answer1_1"
+                >Нужны средства для ребёнка младше 10 лет</label
+              >
+            </div>
+            <div class="option">
+              <input type="radio" name="answer1"/>
+              <label for="answer1_2">Мне меньше 25 лет</label>
+            </div>
+            <div class="option">
+              <input type="radio" name="answer1"/>
+              <label for="answer1_3">От 25 до 35 лет</label>
+            </div>
+            <div class="option">
+              <input type="radio" name="answer1"/>
+              <label for="answer1_4">От 35 до 45 лет</label>
+            </div>
+            <div class="option">
+              <input type="radio" name="answer1"/>
+              <label for="answer1_5">Мне больше 45 лет</label>
+            </div>
+          </div>
+          <div class="quiz_buttons">
+            <button class="next" onclick="nextQuestion(2)">Далее</button>
+          </div>
+        </div>
+        <div class="question" id="question2">
+          <h2>Какой у вас тип кожи?</h2>
+          <div class="options">
+            <div class="option">
+              <input type="radio" name="answer1"/>
+              <label for="answer1_1">Сухая</label>
+            </div>
+            <div class="option">
+              <input type="radio" name="answer1"/>
+              <label for="answer1_2">Нормальная</label>
+            </div>
+            <div class="option">
+              <input type="radio" name="answer1"/>
+              <label for="answer1_3">Комбинированная</label>
+            </div>
+            <div class="option">
+              <input type="radio" name="answer1"/>
+              <label for="answer1_4">Жирная</label>
+            </div>
+          </div>
+          <div class="quiz_buttons">
+            <button class="previous" onclick="previousQuestion(1)">
+              Назад
+            </button>
+            <button class="next" onclick="nextQuestion(3)">Далее</button>
+          </div>
+        </div>
+        <div class="question" id="question3">
+          <h2>Беспокоят ли воспаления на лице?</h2>
+          <div class="options">
+            <div class="option">
+              <input type="radio" name="answer1"/>
+              <label for="answer1_1">Да</label>
+            </div>
+            <div class="option">
+              <input type="radio" name="answer1"/>
+              <label for="answer1_2">Нет</label>
+            </div>
+            <div class="option">
+              <input type="radio" name="answer1"/>
+              <label for="answer1_3">Иногда</label>
+            </div>
+          </div>
+          <div class="quiz_buttons">
+            <button class="previous" onclick="previousQuestion(2)">
+              Назад
+            </button>
+            <button class="next" onclick="showResults()">
+              Узнать результат
+            </button>
+          </div>
+        </div>
+      </div>
+      <div id="results" style="display: none">
+        <h1 class="title_name">Результат</h1>
+        <p class="title_text">
+          Мы подобрали для вас наиболее подходящие средства
+        </p>
+        <div id="products"></div>
+        <div class="number_pagination">
+          <ul>
+            <li class="page-item">
+              <a class="page-link current" href="#">1</a>
+            </li>
+            <li class="page-item"><a class="page-link" href="#">2</a></li>
+            <li class="page-item"><a class="page-link" href="#">3</a></li>
+            <li class="page-item"><span class="page-dots">...</span></li>
+            <li class="page-item"><a class="page-link" href="#">13</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="index.js"></script>
+</html>

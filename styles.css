@@ -1,0 +1,220 @@
+.main_container{
+    max-width: 1440px;
+    margin: 0 auto;
+    font-family: 'Inter', sans-serif;
+}
+.title_description{
+    max-width: 868px;
+    margin-top: 50px;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+.title_name{
+    font-weight: 700;
+    font-size: 40px;
+    margin-bottom: 34px;
+}
+.title_text{
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+    margin-bottom: 34px;
+    max-width: 583px;
+}
+.quiz {
+    position: relative;
+    max-width: 868px;
+    background-color: #DDF3FF;
+    height: 432px;
+    border-radius: 10px;
+    margin-left: 50px;
+}
+.question {
+    display: none;
+    margin-top: 38px;
+    margin-left: 35px;
+}
+
+.quiz_buttons{
+    position: absolute;
+    bottom: 65px;
+}
+button {
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    font-size: 15px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+button.previous{
+    background-color: #FFFFFF;
+    color: #000000;
+    margin-right: 10px;
+}
+
+button.previous:hover{
+    background-color: #d4d4d4;
+}
+
+button.next:hover{
+    background-color: #028bd4;
+}
+
+button.next{
+    background-color: #00A5FF;
+    color: #FFFFFF;
+}
+
+.warning{
+    position: absolute;
+    bottom: 20px;
+}
+.pagination {
+    display: flex;
+    justify-content: flex-start;
+    list-style: none;
+    padding-top: 35px;
+    padding-left: 35px;
+}
+.pagination li {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    margin-right: 10px;
+    cursor: pointer;
+}
+.pagination li.active {
+    background-color: #000;
+}
+.progress {
+    margin-top: 16px;
+    margin-left: 35px;
+    color: #9A9A9A;
+    font-size: 15px;
+}
+.options {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.option {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+.option input {
+    margin-right: 10px;
+}
+.option label {
+    margin: 0;
+    font-size: 15px;
+}
+
+.question h2{
+    margin-bottom: 32px;
+    margin-top: 38px;
+}
+
+#results{
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+#products{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.product {
+    position: relative;
+    max-width: 240px;
+    height: 342px;
+    margin-bottom: 35px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.image {
+    width: 100%;
+    height: 240px;
+    object-fit: cover;
+    margin-bottom: 22px;
+    border: 1px solid #E9E9E9;
+    object-fit: contain;
+    border-radius: 7px;
+}
+.title {
+    display: -webkit-box;
+    -webkit-line-clamp: 2; /* Количество строк */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 15px;
+    margin-top: 0;
+}
+.price {
+    font-weight: 600;
+    font-size: 27px;
+}
+.old-price {
+    font-weight: 600;
+    font-size: 20px;
+    color: #B8B8B8;
+    margin-right: 10px;
+    text-decoration: line-through;
+}
+
+.prices{
+    height: 20px;
+    margin-top: 0;
+    display: flex;
+    align-items: center;
+}
+
+.number_pagination {
+    display: flex;
+    margin-top: 27px;
+}
+
+.number_pagination ul{
+    padding-left: 0;
+}
+
+.page-item {
+    list-style: none;
+    padding: 5px;
+    display: inline;
+    color: #B8B8B8;
+}
+
+.page-item a.current{
+    color: #00A5FF;
+}
+
+.page-dots {
+    display: inline;
+    color: #B8B8B8;
+}
+
+.page-link {
+    text-decoration: none;
+    color: #B8B8B8;
+}
+
+.favorite {
+    position: absolute;
+    top: 10px;
+    right: 17px;
+    width: 28px;
+    height: 24px;
+    background-image: url('images/heart.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    cursor: pointer;
+}
